@@ -7,7 +7,31 @@
   themes: light --default;
 }
 
+:root {
+  --primary-gradient: linear-gradient(
+    to right,
+    rgba(79, 57, 246, 1) 0%,
+    rgba(149, 20, 250, 1) 100%
+  );
+}
+
 /* Font Apply */
 * {
   font-family: "Manrope", sans-serif;
+}
+
+/* Global CSS */
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary-custom {
+  @apply btn text-white rounded-full;
+  background-image: var(--primary-gradient);
+}
+
+.btn-secondary-custom {
 }
