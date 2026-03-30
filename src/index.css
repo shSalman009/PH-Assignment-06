@@ -34,4 +34,5 @@
 }
 
 .btn-secondary-custom {
+  @apply btn btn-outline rounded-full border-[#9514fa] text-[#9514fa];
 }
