@@ -32,11 +32,11 @@ function Banner() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="btn-primary-custom btn-lg py-5">
+            <button className="btn btn-primary-custom btn-lg py-5">
               Explore Products
             </button>
 
-            <button className="btn-secondary-custom btn-lg py-5">
+            <button className="btn btn-secondary-custom btn-lg py-5">
               <CiPlay1 className="size-[1.2em]" />
               Watch Demo
             </button>

@@ -57,7 +57,7 @@ function Navbar() {
         <div className="navbar-end space-x-1">
           <FiShoppingCart />
           <button className="btn border-none bg-white">Login</button>
-          <a className="btn-primary-custom">Get Started</a>
+          <a className="btn btn-primary-custom">Get Started</a>
         </div>
       </div>
     </nav>

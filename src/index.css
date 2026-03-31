@@ -29,10 +29,10 @@
 }
 
 .btn-primary-custom {
-  @apply btn text-white rounded-full;
+  @apply text-white rounded-full;
   background-image: var(--primary-gradient);
 }
 
 .btn-secondary-custom {
-  @apply btn btn-outline rounded-full border-[#9514fa] text-[#9514fa];
+  @apply btn-outline rounded-full border-[#9514fa] text-[#9514fa];
 }
