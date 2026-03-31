@@ -17,7 +17,7 @@ export default function Product({ product, cartItems, setCartItems }) {
 
   return (
     <div className="card bg-base-100 border-2 border-gray-100 rounded-xl">
-      <div className="card-body p-3">
+      <div className="card-body p-4">
         <div className="flex justify-between">
           <div className="w-14 h-14 p-2 border border-gray-200 rounded-full grid place-items-center mb-2 self-end mt-4">
             <img className="max-w-full" src={product.icon} alt="Premium Icon" />
@@ -40,11 +40,11 @@ export default function Product({ product, cartItems, setCartItems }) {
             </span>
           </p>
         </div>
-        <ul className="mt-4 flex flex-col gap-2 text-base">
+        <ul className="my-4 flex flex-col gap-2 text-base">
           {product.features.map((feature, index) => (
             <li key={index}>
               <MdCheck className="size-5 me-2 inline-block text-success" />
-              <span>{feature}</span>
+              <span className="text-gray-500 font-medium">{feature}</span>
             </li>
           ))}
         </ul>
