@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import Product from "./Product";
 import Cart from "./Cart";
 
-export default function Products() {
-  const [selectedTab, setSelectedTab] = useState("cart");
+export default function Products({ productsPromise, cartItems, setCartItems }) {
+  const products = use(productsPromise);
+
+  const [selectedTab, setSelectedTab] = useState("products");
   const handleSelectTab = (tab) => {
     setSelectedTab(tab);
   };
@@ -37,20 +39,24 @@ export default function Products() {
                   : "btn rounded-full border-none bg-transparent"
               }`}
             >
-              Cart
+              Cart ({cartItems.length})
             </button>
           </div>
         </div>
 
-        {/* Products Grid */}
         {selectedTab === "products" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((id) => (
-              <Product key={id} />
+            {products.map((product) => (
+              <Product
+                key={product.id}
+                product={product}
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+              />
             ))}
           </div>
         ) : (
-          <Cart />
+          <Cart cartItems={cartItems} setCartItems={setCartItems} />
         )}
       </div>
     </div>

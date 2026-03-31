@@ -1,9 +1,9 @@
 import { FiShoppingCart } from "react-icons/fi";
 import { HiMenuAlt1 } from "react-icons/hi";
 
-function Navbar() {
+function Navbar({ cartItems }) {
   return (
-    <nav className="bg-base-100 shadow-sm">
+    <nav className="bg-base-100 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -55,7 +55,15 @@ function Navbar() {
           </ul>
         </div>
         <div className="navbar-end space-x-1">
-          <FiShoppingCart />
+          <div className="relative">
+            <FiShoppingCart />
+            {cartItems.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1">
+                {cartItems.length}
+              </span>
+            )}
+          </div>
+
           <button className="btn border-none bg-white">Login</button>
           <a className="btn btn-primary-custom">Get Started</a>
         </div>
