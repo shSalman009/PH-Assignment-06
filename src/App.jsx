@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Stats from "./components/Stats";
 import Products from "./components/Products";
+import Steps from "./components/Steps";
 
 const getProducts = async () => {
   const res = await fetch("/productsData.json");
@@ -24,6 +25,7 @@ function App() {
         cartItems={cartItems}
         setCartItems={setCartItems}
       />
+      <Steps />
     </>
   );
 }
