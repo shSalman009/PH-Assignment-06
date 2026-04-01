@@ -1,13 +1,23 @@
+import { useEffect, useState } from "react";
 import { MdCheck } from "react-icons/md";
+import { toast } from "react-toastify";
 
 export default function Product({ product, cartItems, setCartItems }) {
-  const handleAddToCart = () => {
-    const isAlreadyInCart = cartItems.find((item) => item.id === product.id);
+  const [isAlreadyInCart, setIsAlreadyInCart] = useState(false);
 
+  const handleAddToCart = () => {
     if (!isAlreadyInCart) {
       setCartItems((prevItems) => [...prevItems, product]);
+      toast.success("Product added to cart");
+    } else {
+      toast.error("Product already in Cart");
     }
   };
+
+  useEffect(() => {
+    const isInCart = cartItems.find((item) => item.id === product.id);
+    setIsAlreadyInCart(!!isInCart);
+  }, [cartItems]);
 
   const tagColors = {
     popular: "bg-purple-600/20 text-purple-600",
@@ -50,10 +60,10 @@ export default function Product({ product, cartItems, setCartItems }) {
         </ul>
 
         <button
-          className="btn btn-primary-custom py-6 btn-block mt-auto"
+          className={`btn py-6 btn-block mt-auto ${isAlreadyInCart ? "btn-secondary-custom" : "btn-primary-custom"}`}
           onClick={handleAddToCart}
         >
-          Buy Now
+          {isAlreadyInCart ? "Added to Cart" : "Add to Cart"}
         </button>
       </div>
     </div>

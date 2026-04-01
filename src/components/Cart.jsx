@@ -1,16 +1,17 @@
-import { useState } from "react";
-import image from "../assets/products/design-tool.png";
 import { FiShoppingCart } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 export default function Cart({ cartItems, setCartItems }) {
   const handleRemoveFromCart = (productId) => {
     setCartItems((prevItems) =>
       prevItems.filter((item) => item.id !== productId),
     );
+    toast.success("Product removed from cart");
   };
 
   const handleCheckout = () => {
     setCartItems([]);
+    toast.success("Checkout Successfull");
   };
 
   return (

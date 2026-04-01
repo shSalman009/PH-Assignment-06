@@ -7,6 +7,7 @@ import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import Cta from "./components/Cta";
+import { Bounce, ToastContainer } from "react-toastify";
 
 const getProducts = async () => {
   const res = await fetch("/productsData.json");
@@ -17,7 +18,7 @@ const productsPromise = getProducts();
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  console.log(cartItems);
+
   return (
     <>
       <Navbar cartItems={cartItems} />
@@ -32,6 +33,21 @@ function App() {
       <Pricing />
       <Cta />
       <Footer />
+
+      {/* Toast Container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </>
   );
 }
