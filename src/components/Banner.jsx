@@ -31,7 +31,7 @@ function Banner() {
             software—all in one place. Start creating faster today.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center">
             <button className="btn btn-primary-custom btn-lg py-5">
               Explore Products
             </button>

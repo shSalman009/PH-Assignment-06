@@ -26,12 +26,8 @@ export default function Cart({ cartItems, setCartItems }) {
           <h2 className="text-xl font-bold">Your Cart</h2>
           {cartItems.map((cartItem) => (
             <div className="flex bg-base-200 p-4 rounded-lg mt-4 items-center gap-4">
-              <div className="w-12 h-12 p-2 border border-gray-200 rounded-full grid place-items-center">
-                <img
-                  className="max-w-full"
-                  src={cartItem.icon}
-                  alt="Premium Icon"
-                />
+              <div className="w-14 h-14 border border-gray-200 bg-white rounded-full grid place-items-center mb-2 self-end mt-4">
+                <p className="text-3xl">{cartItem.icon}</p>
               </div>
               <div>
                 <h4 className="text-base font-semibold">{cartItem.name}</h4>

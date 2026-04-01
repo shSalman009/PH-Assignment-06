@@ -29,8 +29,8 @@ export default function Product({ product, cartItems, setCartItems }) {
     <div className="card bg-base-100 border-2 border-gray-100 rounded-xl">
       <div className="card-body p-4">
         <div className="flex justify-between">
-          <div className="w-14 h-14 p-2 border border-gray-200 rounded-full grid place-items-center mb-2 self-end mt-4">
-            <img className="max-w-full" src={product.icon} alt="Premium Icon" />
+          <div className="w-14 h-14 border border-gray-200 rounded-full grid place-items-center mb-2 self-end mt-4">
+            <p className="text-3xl">{product.icon}</p>
           </div>
           <span
             className={`rounded-full px-3 py-1.5 text-sm self-start ${tagColors[product.tagType]}`}
