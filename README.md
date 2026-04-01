@@ -1,16 +1,24 @@
-# React + Vite
+# 🛠️ DigiTools – A Digital Tool Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DigiTools is a sleek, modern platform for discovering and purchasing premium digital assets. This project focuses on providing a smooth user experience for exploring AI tools, design templates, and productivity software.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Technologies Used
 
-## React Compiler
+- **React.js** – Component-based UI architecture.
+- **Tailwind CSS & DaisyUI** – Modern, utility-first styling and UI components.
+- **JavaScript (ES6+)** – Logic for cart functionality and data mapping.
+- **React-Toastify** – User feedback for adding/removing items.
+- **JSON** – Structured dummy data for product management.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **🔍 Explore Products** – Browse a curated selection of digital tools with detailed info.
+- **🛒 Dynamic Cart System** –
+  - Add items to your cart with real-time updates.
+  - Remove cart items instantly.
+  - Simulated Checkout and clear the cart.
+- **⚡ Fast & Clean UI** – A minimalist, fully responsive design built with Tailwind CSS and DaisyUI.
